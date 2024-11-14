@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="/Css/sorting-visualizer.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Sorting Visualizer</h1>
+            <nav>
+                <ul>
+                    <li><a href="/Html/index.html">Home</a></li>
+                    <li><a href="/Html/Dsa.html">DSA</a></li>
+                    <li><a href="/Html/learn.html">Learn</a></li>
+                    <li><a href="/Html/explore.html">Explore</a></li>
+                    <li><a href="/Html/array-builder.html">Array Builder</a></li>
+                    <li><a href="/Html/sorting-visualizer.html">Sorting Visualizer</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <h2>Visualize Sorting Algorithms</h2>
+            <p>Select a sorting algorithm and watch how it sorts an array step by step.</p>
+
+            <div class="controls">
+                <label for="algorithmSelect">Choose Sorting Algorithm:</label>
+                <select id="algorithmSelect">
+                    <option value="bubbleSort">Bubble Sort</option>
+                    <option value="selectionSort">Selection Sort</option>
+                    <option value="insertionSort">Insertion Sort</option>
+                    <option value="mergeSort">Merge Sort</option>
+                    <option value="quickSort">Quick Sort</option>
+                </select>
+
+                <label for="arraySize">Array Size:</label>
+                <input type="number" id="arraySize" value="20" min="5" max="100">
+
+                <button onclick="generateArray()">Generate New Array</button>
+                <button onclick="startSorting()">Start Sorting</button>
+
+                <label for="speedControl">Speed:</label>
+                <input type="range" id="speedControl" min="1" max="100" value="50">
+            </div>
+
+            <div id="arrayContainer" class="array-container"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 DSA Visualizer & Practice Platform | Neeraj Kumhar | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/Js/sorting-visualizer.js"></script>
+</body>
+</html>
