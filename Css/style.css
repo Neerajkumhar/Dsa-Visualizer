@@ -15,11 +15,70 @@ body {
     margin: auto;
     max-width: 1200px;
 }
+.ct h1{
+    color: white;
+    margin-top: 15px;
+}
+
+/* this is the sub part */
+
+.contain {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    font-size: 24px;
+    color: #1a3c5e;
+    margin-bottom: 20px;
+}
+#search {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#buttons-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.area-button {
+    background-color: #fff;
+    border: 1px solid #1a3c5e;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 16px;
+    color: #1a3c5e;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+.area-button:hover {
+    background-color: #e6f0ff;
+}
+.cube {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #1a3c5e;
+    margin-right: 10px;
+}
+
+.ct{
+    display: flex;
+    justify-content: space-between;
+}
 
 header {
-    background: #333;
+    background: #2D336B;
     color: #fff;
-    padding: 1rem 0;
+    padding: 0rem 0;
+    padding-top: 15px;
 }
 
 header h1 {
@@ -30,7 +89,7 @@ header h1 {
 nav ul {
     list-style: none;
     text-align: center;
-    padding: 0;
+    padding-top: 20px;
 }
 
 nav ul li {
@@ -50,19 +109,20 @@ nav ul li a:hover {
 }
 
 .hero {
-    background: #784d71;
+    background: #A9B5DF;
     color: #fff;
     padding: 60px 0;
     text-align: center;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     padding-bottom: 20px;
+    font-weight: 600;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-bottom: 40px;
 }
 
@@ -73,10 +133,10 @@ nav ul li a:hover {
 }
 
 .hero-photo {
-    width: 150px; /* Adjust size as needed */
-    height: 150px; /* Adjust size as needed */
-    border-radius: 50%; /* Makes the photo circular */
-    margin-right: 20px; /* Space between photo and text */
+    width: 465px;
+    height: 303px;
+    margin-right: 20px;
+    border-radius: 19px;
 }
 
 .hero-text {
@@ -84,62 +144,32 @@ nav ul li a:hover {
 }
 
 .hero .btn {
-    background: #fff;
-    color: #784d71;
+    background: #2D336B;
+    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-size: 1rem;
     text-decoration: none;
+    padding: 10px;
 }
 
 .hero .btn:hover {
-    background: #784d71;
+    background: #7886C7;
     font-weight: 600;
     color: #ffffff;
     border: solid 2px white;
 }
 
-.section {
-    padding: 60px 0;
-    text-align: center;
-}
 
-.section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.section p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.section .btn {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-}
-
-.section .btn:hover {
-    background: #ffffff;
-    border: 2px solid black;
-    font-weight: 600;
-    color: black;
-}
 
 footer {
-    background: #333;
+    background: #2D336B;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 footer p {
@@ -224,7 +254,7 @@ footer p {
 }
 
 .queue-element {
-    background-color: #007acc;
+    background-color: #2D336B;
     color: #fff;
     padding: 10px;
     margin: 5px 0;
@@ -253,7 +283,7 @@ footer p {
 }
 
 button {
-    background-color: #007acc;
+    background-color: #2D336B;
     color: white;
     padding: 10px 15px;
     margin-right: 10px;
@@ -262,6 +292,125 @@ button {
 }
 
 button:hover {
-    background-color: #005f99;
+    background-color: #2D336B;
 }
 
+/* ngfghhvjhvhj */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.chbot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f7fa;
+    margin: 0;
+}
+
+.chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: none;
+    z-index: 1000;
+}
+
+.chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #2D336B;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.chat-header {
+    background-color: #2D336B;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.chat-body {
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 70%;
+}
+
+.bot {
+    background-color: #e9ecef;
+    margin-left: 20px;
+}
+
+.user {
+    background-color: #2D336B;
+    color: #fff;
+    margin-right: 20px;
+    align-self: flex-end;
+}
+
+.chat-footer {
+    padding: 10px;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.chat-footer input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.chat-footer button {
+    padding: 8px 15px;
+    background-color: #2D336B;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-footer button:hover {
+    background-color: #2D336B;
+}

@@ -3,61 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorting Visualizer</title>
+    <title>DSA Array Visualizer</title>
     <link rel="stylesheet" href="/Css/sorting-visualizer.css">
+        
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Sorting Visualizer</h1>
+        <div class="container1 ct">
+            <h1>VIRTUAL BOOK</h1>
             <nav>
                 <ul>
-                    <li><a href="/Html/index.html">Home</a></li>
+                    <li><a href="/index.html">Home</a></li>
                     <li><a href="/Html/Dsa.html">DSA</a></li>
+                    <li><a href="/Html/visualize.html">Visualize</a></li>
                     <li><a href="/Html/learn.html">Learn</a></li>
-                    <li><a href="/Html/explore.html">Explore</a></li>
-                    <li><a href="/Html/array-builder.html">Array Builder</a></li>
-                    <li><a href="/Html/sorting-visualizer.html">Sorting Visualizer</a></li>
+                    <li><a href="/Html/practice.html">Practice</a></li>
+                    <li><a href="/Html/login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <section class="section">
+    <h1>DSA Array Visualizer</h1>
+    <div class="container">
+      <button onclick="generateArray()">Generate Array</button>
+      <button onclick="bubbleSort()">Bubble Sort</button>
+      <button onclick="selectionSort()">Selection Sort</button>
+      <button onclick="insertionSort()">Insertion Sort</button>
+      <button onclick="mergeSortHandler()">Merge Sort</button>
+      <button onclick="stopSortingProcess()">Stop</button>
+      <button onclick="resetSorting()">Reset</button>
+      <br>
+      <label for="speed">Speed:</label>
+      <input type="range" id="speed" min="100" max="2000" value="500" step="100" onchange="updateSpeed()">
+    </div>
+    <div class="array-container" id="arrayContainer"></div>
+    <p id="step-description">Click a sorting algorithm to start visualization</p>
+    <button><a href="/Html/vr.html" class="btn">VR Implementation</a></button>
+    <section id="dsa-notes" class="sec">
+        <h2>DSA Array Sorting Notes</h2>
+        <p>
+          Array sorting is a fundamental topic in Data Structures and Algorithms (DSA). Different sorting algorithms are chosen based on factors like complexity, stability, and data size. Below are brief descriptions along with examples:
+        </p>
+        <ul>
+          <li>
+            <strong>Bubble Sort:</strong> Repeatedly compares adjacent elements and swaps them if they are in the wrong order.<br>
+            <em>Example:</em> [5, 3, 8, 4] → [3, 5, 4, 8] after one full pass.
+          </li>
+          <li>
+            <strong>Selection Sort:</strong> Finds the minimum element from the unsorted portion and swaps it with the first unsorted element.<br>
+            <em>Example:</em> [64, 25, 12, 22, 11] → [11, 25, 12, 22, 64] after the first iteration.
+          </li>
+          <li>
+            <strong>Insertion Sort:</strong> Builds the sorted array one element at a time by inserting each new element into its correct position.<br>
+            <em>Example:</em> [12, 11, 13, 5, 6] → After inserting 11 in the correct place, and so on.
+          </li>
+          <li>
+            <strong>Merge Sort:</strong> A divide-and-conquer algorithm that splits the array into halves, sorts each half, and merges them.<br>
+            <em>Example:</em> [38, 27, 43, 3, 9, 82, 10] → [3, 9, 10, 27, 38, 43, 82] after complete merging.
+          </li>
+        </ul>
+      </section>
+      <footer>
         <div class="container">
-            <h2>Visualize Sorting Algorithms</h2>
-            <p>Select a sorting algorithm and watch how it sorts an array step by step.</p>
-
-            <div class="controls">
-                <label for="algorithmSelect">Choose Sorting Algorithm:</label>
-                <select id="algorithmSelect">
-                    <option value="bubbleSort">Bubble Sort</option>
-                    <option value="selectionSort">Selection Sort</option>
-                    <option value="insertionSort">Insertion Sort</option>
-                    <option value="mergeSort">Merge Sort</option>
-                    <option value="quickSort">Quick Sort</option>
-                </select>
-
-                <label for="arraySize">Array Size:</label>
-                <input type="number" id="arraySize" value="20" min="5" max="100">
-
-                <button onclick="generateArray()">Generate New Array</button>
-                <button onclick="startSorting()">Start Sorting</button>
-
-                <label for="speedControl">Speed:</label>
-                <input type="range" id="speedControl" min="1" max="100" value="50">
-            </div>
-
-            <div id="arrayContainer" class="array-container"></div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2024 DSA Visualizer & Practice Platform | Neeraj Kumhar | All rights reserved.</p>
+            <p>© 2024 DSA Visualizer & Practice Platform | Master Team | All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="/Js/sorting-visualizer.js"></script>
+  
+  
+    
+<script src="/Js/sorting-visualizer.js "></script>
 </body>
 </html>
