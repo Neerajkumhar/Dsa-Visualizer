@@ -4,6 +4,8 @@
 https://neerajkumhar.github.io/Dsa-Visualizer/
 
 
+DSA Virtual Lab is a single-page HTML project developed as a college assignment to provide an interactive, browser-based environment for learning and visualizing Data Structures & Algorithms. It simulates a compact lab where students can experiment with common data structures (arrays, stacks, queues, linked lists, trees, graphs) and visualize algorithm steps (sorting, searching, traversals) using clear, animated demonstrations.
+
 This repository contains a static DSA visualizer site (HTML, CSS, JS). The project contains the site structure in the workspace root and the `Css/`, `Js/`, `Html/`, and `Img/` folders.
 
 What's included:
